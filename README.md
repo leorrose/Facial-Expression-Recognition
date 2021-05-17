@@ -1,4 +1,4 @@
-# Social-Network-Facial-Expression-Recognitio
+# Social-Network-Facial-Expression-Recognition
 
 ## Citations
 
