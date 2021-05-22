@@ -5,6 +5,7 @@ import streamlit as st
 from typing import List
 from PIL import Image
 from fer import FacialExpressionRecognizer
+from mtcnn.mtcnn import MTCNN
 
 # get script directory
 script_dir: str = os.path.dirname(os.path.realpath(__file__))
@@ -15,7 +16,7 @@ cascade_model_path: str = f"{script_dir}/models/haarcascade_frontalface_default.
 # facial expression recognizer
 fer: FacialExpressionRecognizer = FacialExpressionRecognizer(fer_model_path)
 # face detection
-classifier: cv2.CascadeClassifier = cv2.CascadeClassifier(cascade_model_path)
+detector: cv2.CascadeClassifier = MTCNN()
 
 @st.cache(suppress_st_warning=True)
 def classify_image(img: np.ndarray) -> np.ndarray:
@@ -28,17 +29,17 @@ def classify_image(img: np.ndarray) -> np.ndarray:
         np.ndarray: [description]
     """
     # perform face detection
-    bboxes: np.ndarray = classifier.detectMultiScale(img)
+    faces: np.ndarray = detector.detect_faces(img)
 
     # predict labels for each detected face
     labels: List[str] = []
-    for box in bboxes:
+    for face in faces:
         # extract
         x: int = 0
         y: int = 0
         w: int = 0
         h: int = 0
-        x, y, w, h = box
+        x, y, w, h = face["box"]
         # crop image
         face: np.ndarray = img[y:y + h, x:x + w]
         # pre process image
@@ -47,18 +48,19 @@ def classify_image(img: np.ndarray) -> np.ndarray:
         labels.append(fer.get_facial_expression_label(face))
 
     # print bounding box and label 
-    for index, box in enumerate(bboxes):
+    for index, face in enumerate(faces):
         # extract
         x: int = 0
         y: int = 0
         w: int = 0
         h: int = 0
-        x, y, w, h = box
+        x, y, w, h = face["box"]
         # draw a rectangle over the img
         cv2.rectangle(img, (x, y), (x + w, y + h), (255,0,0), 1)
-        # add prediction
-        cv2.putText(img, labels[index], (x, y-10),
-                    cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0), 2)
+        # draw prediction over the img
+        cv2.putText(img, labels[index], (x, y+30),
+                    cv2.FONT_HERSHEY_SIMPLEX, 1,
+                    (255,0,0), 2)
     # show the image
     return img
 
@@ -74,7 +76,7 @@ if __name__ == "__main__":
     st.write(("Please upload an image for facial "
              "expression recognition."))
     uploaded_file: st.uploaded_file_manager.UploadedFile = st.file_uploader(
-        "", type=['png', 'jpg', 'jpeg'])
+        "", type=['jpg', 'jpeg'])
     
     # app button to start facial expression recognition
     if st.button("Classify Facial Expression"):
