@@ -6,6 +6,8 @@ The target of this project is to create an application to classify the emotion o
 
 This project was created with <b> Python(3.8.7), tensorflow, keras, streamlit, pandas, numpy and more libraries</b>.
 
+For face detection we used Haar-cascade detection from OpenCV.
+
 ## Project Research
 
 In order to understand the steps and what we did you are welcome to look at [the research jupyter notebook](https://github.com/leorrose/Social-Network-Facial-Expression-Recognition/blob/main/Facial_Expression_Recognition.ipynb).
