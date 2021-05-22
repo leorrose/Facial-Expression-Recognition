@@ -1,4 +1,62 @@
-# Social-Network-Facial-Expression-Recognition
+# Facial-Expression-Recognition
+
+A facial expression recognition using deep learning based on FER2013 data set.
+
+The target of this project is to create an application to classify the emotion of faces in images.
+
+This project was created with <b> Python(3.8.7), tensorflow, keras, streamlit, pandas, numpy and more libraries</b>.
+
+## Project Research
+
+In order to understand the steps and what we did you are welcome to look at [the research jupyter notebook](https://github.com/leorrose/Social-Network-Facial-Expression-Recognition/blob/main/Facial_Expression_Recognition.ipynb).
+
+## Benchmarking on FER2013:
+|Model                                                  |Data with disgust class|Data without disgust class|
+|:------------------------------------------------------|:----------------------|:-------------------------|
+|Transfer Learning using Xception                       |0.4078                 |0.4149                    |
+|Transfer Learning + Fine Tuning using Xception         |0.6485                 |0.6517                    |
+|Transfer Learning using ResNet152V2                    |0.3798                 |0.3898                    |
+|Transfer Learning + Fine Tuning using ResNet152V2      |0.5551                 |0.2714                    |
+|Transfer Learning using MobileNetV2                    |0.4013                 |0.3941                    |
+|Transfer Learning + Fine Tuning using MobileNetV2      |0.4771                 |0.4675                    |
+|Transfer Learning using EfficientNetB0                 |0.4084                 |0.4122                    |
+|Transfer Learning + Fine Tuning using EfficientNetB0   |0.5856                 |0.5961                    |
+|Transfer Learning using InceptionResNetV2              |0.4153                 |0.4235                    |
+|Transfer Learning + Fine Tuning using InceptionResNetV2|0.4138                 |0.4154                    |
+|Self Made CNN                                          |0.5857                 |0.5888                    |
+
+
+## Project Setup and Run:
+
+### Using Docker:
+1. Clone this repository.
+2. Open cmd/shell/terminal and go to project folder: `cd Facial-Expression-Recognition`
+3. Build and Run the docker file: `docker build -t fer . && docker run -p 8501:8501 fer`
+5. Open the following [link](http://localhost:8501/)
+6. Enjoy the application.
+
+### Using python:
+1. Clone this repository.
+2. Open cmd/shell/terminal and go to project folder: `cd Facial-Expression-Recognition`
+3. Install project dependencies: `pip install -r requirements.txt`
+4. Run the streamlit app: `streamlit run ./app/fer_app.py`
+5. Open the following [link](http://localhost:8501/)
+6. Enjoy the application.
+
+
+## Demo
+[![Add Demo]()
+
+
+## Examples:
+|Image|Emotion|
+|:-------------------------:|:-------------------------:|
+|To Add Image|To Add Label|
+|To Add Image|To Add Label|
+|To Add Image|To Add Label|
+|To Add Image|To Add Label|
+|To Add Image|To Add Label|
+|To Add Image|To Add Label|
 
 ## Citations
 
@@ -37,3 +95,7 @@ http://deeplearning.net/icml2013-workshop-competition}
     year={2016}
 }
 ```
+
+Please let me know if you find bugs or something that needs to be fixed.
+
+Hope you enjoy.
