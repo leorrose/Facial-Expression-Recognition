@@ -30,14 +30,6 @@ In order to understand the steps and what we did you are welcome to look at [the
 
 ## Project Setup and Run:
 
-### Using Docker:
-1. Clone this repository.
-2. Open cmd/shell/terminal and go to project folder: `cd Facial-Expression-Recognition`
-3. Build and Run the docker file: `docker build -t fer . && docker run -p 8501:8501 fer`
-5. Open the following [link](http://localhost:8501/)
-6. Enjoy the application.
-
-### Using python:
 1. Clone this repository.
 2. Open cmd/shell/terminal and go to project folder: `cd Facial-Expression-Recognition`
 3. Install project dependencies: `pip install -r requirements.txt`
