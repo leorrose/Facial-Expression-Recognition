@@ -1,8 +1,8 @@
-# Social-Network-Facial-Expression-Recognition
+# Facial-Expression-Recognition
 
-A social network facial expression recognition using deep learning based on FER2013 data set.
+A facial expression recognition using deep learning based on FER2013 data set.
 
-The target of this project is to create an application to classify the emotion from social network images.
+The target of this project is to create an application to classify the emotion of faces in images.
 
 This project was created with <b> Python(3.8.7), tensorflow, keras, streamlit, pandas, numpy and more libraries</b>.
 
@@ -27,13 +27,25 @@ In order to understand the steps and what we did you are welcome to look at [the
 
 
 ## Project Setup and Run:
-1. To Add
-2. To Add
-3. To Add
-4. To Add
+
+### Using Docker:
+1. Clone this repository.
+2. Open cmd/shell/terminal and go to project folder: `cd Facial-Expression-Recognition`
+3. Build and Run the docker file: `docker build -t fer . && docker run -p 8501:8501 fer`
+5. Open the following [link](http://localhost:8501/)
+6. Enjoy the application.
+
+### Using python:
+1. Clone this repository.
+2. Open cmd/shell/terminal and go to project folder: `cd Facial-Expression-Recognition`
+3. Install project dependencies: `pip install -r requirements.txt`
+4. Run the streamlit app: `streamlit run ./app/fer_app.py`
+5. Open the following [link](http://localhost:8501/)
+6. Enjoy the application.
+
 
 ## Demo
-[![Add Demo]("")
+[![Add Demo]()
 
 
 ## Examples:
@@ -45,12 +57,6 @@ In order to understand the steps and what we did you are welcome to look at [the
 |To Add Image|To Add Label|
 |To Add Image|To Add Label|
 |To Add Image|To Add Label|
-
-
-
-Please let me know if you find bugs or something that needs to be fixed.
-
-Hope you enjoy.
 
 ## Citations
 
@@ -89,3 +95,7 @@ http://deeplearning.net/icml2013-workshop-competition}
     year={2016}
 }
 ```
+
+Please let me know if you find bugs or something that needs to be fixed.
+
+Hope you enjoy.
