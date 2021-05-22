@@ -6,7 +6,7 @@ The target of this project is to create an application to classify the emotion o
 
 This project was created with <b> Python(3.8.7), tensorflow, keras, streamlit, pandas, numpy and more libraries</b>.
 
-For face detection we used Haar-cascade detection from OpenCV.
+For face detection we used [MTCNN face detector](https://github.com/ipazc/mtcnn).
 
 ## Project Research
 
@@ -47,18 +47,22 @@ In order to understand the steps and what we did you are welcome to look at [the
 
 
 ## Demo
-[![Add Demo]()
-
+[![Facial Expression Recognition Demo](http://img.youtube.com/vi/_ow6bsEFEUM/0.jpg)](http://www.youtube.com/watch?v=_ow6bsEFEUM "Facial Expression Recognition Demo")
 
 ## Examples:
-|Image|Emotion|
-|:-------------------------:|:-------------------------:|
-|To Add Image|To Add Label|
-|To Add Image|To Add Label|
-|To Add Image|To Add Label|
-|To Add Image|To Add Label|
-|To Add Image|To Add Label|
-|To Add Image|To Add Label|
+||
+|:-------------------------:|
+|!<img src="https://github.com/leorrose/Facial-Expression-Recognition/blob/main/examples/images_from_facebook/1.jpeg" width="400">|
+|<img src="https://github.com/leorrose/Facial-Expression-Recognition/blob/main/examples/images_from_facebook/2.jpeg" width="400">|
+|<img src="https://github.com/leorrose/Facial-Expression-Recognition/blob/main/examples/images_from_facebook/3.jpeg" width="400">|
+|<img src="https://github.com/leorrose/Facial-Expression-Recognition/blob/main/examples/images_from_instagram/1.jpeg" width="400">|
+|<img src="https://github.com/leorrose/Facial-Expression-Recognition/blob/main/examples/images_from_instagram/2.jpeg" width="400">|
+|<img src="https://github.com/leorrose/Facial-Expression-Recognition/blob/main/examples/images_from_instagram/3.jpeg" width="400">|
+|<img src="https://github.com/leorrose/Facial-Expression-Recognition/blob/main/examples/images_from_twitter/1.jpeg" width="400">|
+|<img src="https://github.com/leorrose/Facial-Expression-Recognition/blob/main/examples/images_from_twitter/2.jpeg" width="400">|
+|<img src="https://github.com/leorrose/Facial-Expression-Recognition/blob/main/examples/images_from_twitter/3.jpeg" width="400">|
+|<img src="https://github.com/leorrose/Facial-Expression-Recognition/blob/main/examples/images_from_twitter/4.jpeg" width="400">|
+|<img src="https://github.com/leorrose/Facial-Expression-Recognition/blob/main/examples/images_from_twitter/5.jpeg" width="400">|
 
 ## Citations
 
