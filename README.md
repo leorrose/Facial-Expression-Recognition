@@ -44,7 +44,7 @@ In order to understand the steps and what we did you are welcome to look at [the
 ## Examples:
 ||
 |:-------------------------:|
-|!<img src="https://github.com/leorrose/Facial-Expression-Recognition/blob/main/examples/images_from_facebook/1.jpeg" width="400">|
+|<img src="https://github.com/leorrose/Facial-Expression-Recognition/blob/main/examples/images_from_facebook/1.jpeg" width="400">|
 |<img src="https://github.com/leorrose/Facial-Expression-Recognition/blob/main/examples/images_from_facebook/2.jpeg" width="400">|
 |<img src="https://github.com/leorrose/Facial-Expression-Recognition/blob/main/examples/images_from_facebook/3.jpeg" width="400">|
 |<img src="https://github.com/leorrose/Facial-Expression-Recognition/blob/main/examples/images_from_instagram/1.jpeg" width="400">|
